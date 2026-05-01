@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<locale.h>
-#include <windows.h>
 
 int main(void){
 	
@@ -72,7 +71,6 @@ int main(void){
 	if(verificador1 == d10){
 		printf("\nPrimeiro dígito verificador válido!");
 		printf("\nAnalisando o segundo dígito verificador aguarde ...");
-		Sleep(3000);
 		
 		soma2 = (d1 * 11) + (d2 * 10) + (d3 * 9) + (d4 * 8) + (d5 * 7) + 
 				(d6 * 6) + (d7 * 5) + (d8 * 4) + (d9 * 3) + (d10 * 2);
