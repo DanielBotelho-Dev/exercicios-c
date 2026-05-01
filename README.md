@@ -1,6 +1,6 @@
 # C Programming Projects
 
-Collection of C programs focused on problem-solving and algorithm implementation, including CPF validation using the official Brazilian modulo 11 algorithm.
+Collection of C programs focused on problem-solving and algorithm implementation, featuring CPF validation using the official Brazilian modulo 11 algorithm.
 
 ## Technologies
 
@@ -12,7 +12,8 @@ Collection of C programs focused on problem-solving and algorithm implementation
 
 ### CPF Validator - Digit by Digit
 
-User inputs each digit separately. Validates using the official Brazilian tax ID algorithm (modulo 11).
+This version was intentionally implemented using individual variables and separate `scanf` calls for each digit (11 inputs total).
+The goal is to reinforce fundamental concepts of input handling and variable manipulation in C.
 
 **How to run:**
 
@@ -30,10 +31,14 @@ Output: Valid CPF
 
 ### CPF Validator - Complete Number
 
-User inputs the full 11-digit CPF number. Validates using the official Brazilian tax ID algorithm (modulo 11).
+User inputs the full 11-digit CPF number as a string. The program validates the CPF using the official Brazilian modulo 11 algorithm.
 
-**Known limitation:**
-Currently uses numeric input (`long long`), which prevents handling CPFs with leading zeros. Future versions will implement string-based validation.
+This version includes:
+
+* Support for leading zeros
+* Input validation (length and numeric characters)
+* Detection of invalid CPFs with repeated digits
+* Formatted output (XXX.XXX.XXX-XX)
 
 **How to run:**
 
@@ -43,21 +48,29 @@ Currently uses numeric input (`long long`), which prevents handling CPFs with le
 **Example:**
 
 ```
-Input: 52998224725
-Output: Valid CPF
+Input: 05673113099
+Output: CPF: 056.731.130-99 ✓
 ```
 
 ---
+
+## Project Structure
+
+* `validador_cpf_digitos.c` — basic implementation using individual inputs
+* `validador_cpf_completo.c` — improved version using strings and validation
 
 ## Skills Developed
 
 * Implementation of the modulo 11 validation algorithm
 * Use of arrays and iterative structures (for loops)
-* Handling numeric data types (`int`, `long long`)
+* Handling numeric and string data types in C
 * Input validation techniques
+* String manipulation in C (`char` arrays, `strlen`, ASCII arithmetic)
+* Converting character input to numeric values (`char - '0'`)
+* Understanding different approaches to input handling
 
 ## Future Improvements
 
-* Implement CPF validation using strings
-* Improve input validation and error handling
-* Refactor code into reusable functions
+* Accept formatted CPF input (e.g., 123.456.789-09)
+* Refactor validation logic into reusable functions
+* Improve code organization and modularity
