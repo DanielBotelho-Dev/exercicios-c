@@ -2,6 +2,9 @@
 
 Collection of C programs focused on problem-solving and algorithm implementation, featuring CPF validation using the official Brazilian modulo 11 algorithm.
 
+## Note
+This repository contains projects developed in Portuguese as part of my learning process. Future projects will follow English naming conventions and documentation.
+
 ## Technologies
 
 * Language: C
@@ -54,23 +57,59 @@ Output: CPF: 056.731.130-99 ✓
 
 ---
 
-## Project Structure
+### Calculator (Basic)
+Simple calculator implemented in C with fundamental arithmetic operations.
 
-* `validador_cpf_digitos.c` — basic implementation using individual inputs
-* `validador_cpf_completo.c` — improved version using strings and validation
+**Features:**
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Division by zero validation
+
+**How to run:**
+1. Compile: `gcc calculator_basic.c -o calc_basic`
+2. Run: `./calc_basic`
+
+---
+
+### Calculator (Advanced)
+More complete calculator with additional operations and features.
+
+**Features:**
+- Basic operations (addition, subtraction, multiplication, division)
+- Remainder of division (modulo)
+- Power calculation
+- Square root (with validation for negative numbers)
+- Percentage calculations (two modes)
+- Operation history (last 5 results)
+- Interactive menu with sub-options
+
+**How to run:**
+1. Compile: `gcc calculator_advanced.c -o calc_advanced -lm`
+2. Run: `./calc_advanced`
+
+---
+
+## Project Structure
+- `validador_cpf_digitos.c` — CPF validator using individual digit inputs
+- `validador_cpf_completo.c` — CPF validator using string input
+- `calculator_basic.c` — basic calculator
+- `calculator_advanced.c` — advanced calculator with extended features
 
 ## Skills Developed
-
-* Implementation of the modulo 11 validation algorithm
-* Use of arrays and iterative structures (for loops)
-* Handling numeric and string data types in C
-* Input validation techniques
-* String manipulation in C (`char` arrays, `strlen`, ASCII arithmetic)
-* Converting character input to numeric values (`char - '0'`)
-* Understanding different approaches to input handling
+- Implementation of the modulo 11 validation algorithm
+- Use of arrays and iterative structures (for loops)
+- Handling numeric and string data types in C
+- Input validation techniques
+- String manipulation in C (`char` arrays, `strlen`, ASCII arithmetic)
+- Converting character input to numeric values (`char - '0'`)
+- Control flow using switch-case and nested structures
+- Math functions (`pow`, `sqrt`) from `math.h`
+- Understanding different approaches to input handling
 
 ## Future Improvements
-
-* Accept formatted CPF input (e.g., 123.456.789-09)
-* Refactor validation logic into reusable functions
-* Improve code organization and modularity
+- Accept formatted CPF input (e.g., 123.456.789-09)
+- Refactor validation logic into reusable functions
+- Improve code organization and modularity
+- Improve calculator input validation
