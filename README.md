@@ -57,6 +57,31 @@ Output: CPF: 056.731.130-99 ✓
 
 ---
 
+### CNPJ Validator
+
+User inputs the full 14-digit CNPJ number as a string. The program validates the CNPJ using the official Brazilian modulo 11 algorithm.
+
+This version includes:
+
+* Support for leading zeros
+* Input validation (length and numeric characters)
+* Detection of invalid CNPJs with repeated digits
+* Formatted output (XX.XXX.XXX/XXXX-XX)
+
+**How to run:**
+
+1. Compile: `gcc validador_cnpj.c -o cnpj_validator`
+2. Run: `./cnpj_validator`
+
+**Example:**
+
+```
+Input: 11222333000181
+Output: 11.222.333/0001-81 ✓
+```
+
+---
+
 ### Calculator (Basic)
 Simple calculator implemented in C with fundamental arithmetic operations.
 
@@ -94,6 +119,7 @@ More complete calculator with additional operations and features.
 ## Project Structure
 - `validador_cpf_digitos.c` — CPF validator using individual digit inputs
 - `validador_cpf_completo.c` — CPF validator using string input
+- `validador_cnpj.c` — CNPJ validator using string input
 - `calculator_basic.c` — basic calculator
 - `calculator_advanced.c` — advanced calculator with extended features
 
@@ -107,9 +133,13 @@ More complete calculator with additional operations and features.
 - Control flow using switch-case and nested structures
 - Math functions (`pow`, `sqrt`) from `math.h`
 - Understanding different approaches to input handling
+- Implementation of CNPJ validation using weighted verification digits
+- Data formatting for CPF and CNPJ outputs
 
 ## Future Improvements
 - Accept formatted CPF input (e.g., 123.456.789-09)
 - Refactor validation logic into reusable functions
 - Improve code organization and modularity
 - Improve calculator input validation
+- Refactor validation algorithms using functions to reduce code repetition
+- Implement dynamic operation history for calculator projects
